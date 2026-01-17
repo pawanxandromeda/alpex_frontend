@@ -1,7 +1,7 @@
     import { useNavigate, useLocation } from 'react-router-dom'
     import { useState, useEffect } from 'react'
     import { ToastContainer } from 'react-toastify'
-    import { sidebarItems } from '@data/Sidebar-Data.jsx'
+    import { sidebarItems } from '@/src/data/Sidebar-Data.jsx'
     import { BsChevronDown, BsChevronLeft, BsChevronRight } from 'react-icons/bs'
     import { HiMenu } from 'react-icons/hi'
 
