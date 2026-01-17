@@ -6,7 +6,7 @@ import {
     paymentTermsOptions,
     aluAluOptions,
     tabletOptions,
-} from '@data/PO-Data.jsx'  // Correct: uppercase and .jsx extension
+} from '@data/PO-Data'  // Correct: uppercase and .jsx extension
 import {
     FiX,
     FiSave,
