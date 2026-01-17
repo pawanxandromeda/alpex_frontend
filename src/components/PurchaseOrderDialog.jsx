@@ -6,7 +6,7 @@ import {
     paymentTermsOptions,
     aluAluOptions,
     tabletOptions,
-} from '@data/po-data.jsx'
+} from '@data/po-data'
 import {
     FiX,
     FiSave,
