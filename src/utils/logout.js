@@ -26,7 +26,7 @@ const handleLogout = async () => {
         const message = error.response?.data?.message || 
                        (error.request ? 'No response from server.' : 'An error occurred.')
         
-        console.error('Logout error:', message)
+        console.error('Logout errr:', message)
         
         toast.error(message, {
             onClose: () => (window.location.href = '/login'),
