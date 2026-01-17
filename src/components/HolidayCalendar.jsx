@@ -1,6 +1,5 @@
 import React from 'react'
 import { format } from 'date-fns'
-import { holidays } from '@data/holidays-data'
 import { IoCalendarOutline } from 'react-icons/io5'
 
 const HolidayCalendar = () => {
