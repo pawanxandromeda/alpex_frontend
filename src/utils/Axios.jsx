@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'https://alpex-backend-production.up.railway.app/api/',
+    baseURL: 'https://alpexbackend-production.up.railway.app/api/',
     headers: {
         'Content-Type': 'application/json',
     },
