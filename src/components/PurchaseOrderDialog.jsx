@@ -1,6 +1,12 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import { Combobox, Dialog, Transition } from '@headlessui/react'
-
+import {
+    productTypeOptions,
+    sectionOptions,
+    paymentTermsOptions,
+    aluAluOptions,
+    tabletOptions,
+} from '@data/po-data'
 import {
     FiX,
     FiSave,

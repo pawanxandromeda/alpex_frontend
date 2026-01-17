@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
     import { ToastContainer } from 'react-toastify'
     import { BsChevronDown, BsChevronLeft, BsChevronRight } from 'react-icons/bs'
     import { HiMenu } from 'react-icons/hi'
+    import { sidebarItems } from '@data/sidebar-data'
 
     function Sidebar({ isCollapsed, setIsCollapsed }) {
     const navigate = useNavigate()
