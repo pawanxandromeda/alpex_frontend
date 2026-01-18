@@ -43,6 +43,10 @@ function Sidebar({ isCollapsed, setIsCollapsed }) {
   }
 
   useEffect(() => {
+    console.log('Department from localStorage:', department);
+    console.log('User role from localStorage:', userRole);
+    console.log('Sidebar items:', sidebarItems);
+
     const filterItems = () => {
       // Admin sees all items (except empty department array items)
       if (userRole === 'admin') {
@@ -56,37 +60,36 @@ function Sidebar({ isCollapsed, setIsCollapsed }) {
       const filtered = sidebarItems.filter((item) => {
         // If no department specified, show only to admin (already handled above)
         if (!item.department || item.department.length === 0) {
-          return false
+          return false;
         }
-        
-        return hasAccess(department, item.department)
-      })
+        return hasAccess(department, item.department);
+      });
 
       // Filter dropdown items within each parent item
       filtered.forEach((item) => {
         if (item.items && item.items.length > 0) {
           item.items = item.items.filter((subItem) => {
             if (!subItem.department || subItem.department.length === 0) {
-              return false
+              return false;
             }
-            return hasAccess(department, subItem.department)
-          })
+            return hasAccess(department, subItem.department);
+          });
         }
-      })
+      });
 
       // Remove parent items that have no children after filtering (if they were dropdowns)
       const finalFiltered = filtered.filter(item => {
         if (item.isDropdown && item.items && item.items.length === 0) {
-          return false
+          return false;
         }
-        return true
-      })
+        return true;
+      });
 
       console.log('Filtered sidebar items:', finalFiltered);
-      setFilteredSidebarItems(finalFiltered)
-    }
+      setFilteredSidebarItems(finalFiltered);
+    };
 
-    filterItems()
+    filterItems();
   }, [department, userRole])
 
   const isActive = (path) => path && location.pathname.includes(path)
