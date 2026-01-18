@@ -119,6 +119,10 @@ const PrivateRoute = ({ children }) => {
 
             const uniqueAllowedRoutes = [...new Set(allowedRoutes)]
 
+            console.log('User roles:', userRoles)
+            console.log('Allowed routes:', uniqueAllowedRoutes)
+            console.log('Current path:', location.pathname)
+
             const isAuthorized = uniqueAllowedRoutes.some((route) =>
                 location.pathname.startsWith(route)
             )
