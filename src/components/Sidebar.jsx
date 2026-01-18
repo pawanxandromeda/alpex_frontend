@@ -8,7 +8,7 @@ import sidebarItems from '@data/Sidebar-Data'
 function Sidebar({ isCollapsed, setIsCollapsed }) {
   const navigate = useNavigate()
   const location = useLocation()
-  const department = localStorage.getItem('department')
+  const department = localStorage.getItem('department') || 'ppic'; // Fallback to 'unknown' if department is null
   const userRole = localStorage.getItem('role')
 
   const [openDropdowns, setOpenDropdowns] = useState({})
