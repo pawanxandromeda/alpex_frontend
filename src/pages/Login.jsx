@@ -62,7 +62,7 @@ function Login() {
             localStorage.setItem('username', username)
             localStorage.setItem('role', decoded.role)
             localStorage.setItem('userId', decoded.id)
-
+ localStorage.setItem('department', decoded.department)
             toast.success('Login successful! Redirecting...', {
                 position: "top-right",
                 autoClose: 1500,
