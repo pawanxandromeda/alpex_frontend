@@ -25,7 +25,7 @@ const ROUTE_MAP = {
     ],
     designer: ['/dashboard/todos', '/dashboard/designer'],
     qa: ['/dashboard/todos', '/dashboard/qa'],
-    sales: ['/dashboard/todos', '/dashboard/sales'],
+    sales: ['/dashboard/todos', '/dashboard/sales', '/dashboard/customers'],
     production: ['/dashboard/todos', '/dashboard/production'],
     ppic: ['/dashboard/todos', '/dashboard/ppic'],
 }
